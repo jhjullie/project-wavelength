@@ -34,18 +34,44 @@ li{
 #profileheader{
     font-family: 'Sacramento', cursive;
     font-size:50px;
-    padding-bottom: 5px !important;
+    padding-top: 10%;
     margin:0 !important;
+    color: #ffffff;
+}
+
+.col{
+    display: inline;
+    float:left;
+    width:50%;  
 }
 
 #myprofile{
-    background-color: white;
+    background-image: radial-gradient(#FF8FD6 16.15%, #1645D3 100%);
     margin:auto;
-    width:700px;
-    height:500px;
+    margin-top:50%;
+    top: 100px;
+    font-family: 'Roboto';
+    font-style: italic;
     border-radius: 25px;
-    border: 2px solid #E3F600;
+    width:650px;
+    height:500px;
+    border: 2px solid #ffffff;
     box-shadow:0px 18px 53px 0px rgba(0,0,0,0.3);
-    
+    padding-left:50px;
+    padding-right:50px;
+    left: 20%;
+    text-align:left;
+    color: #ffffff;
+}
+
+.myinput{
+    width: 350px;
+    border-radius: 25px;
+    background-color: white;
+    border-color: #8AC2DD;
+    display: inline-block;
+    position: absolute;
+    left: 52%;
+    margin-left: -100px;
 }
 
