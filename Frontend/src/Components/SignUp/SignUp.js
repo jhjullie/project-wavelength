@@ -71,8 +71,7 @@ function SignUp(){
         const regex =  /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
    
 
-        if (!values.email || !values.first_name || !values.last_name || !values.phonenum ||
-            !values.gender || !values.age || !values.password){
+        if (!values.email || !values.first_name || !values.phonenum || !values.age || !values.password){
             all_errors.first_name = "Please fill out all fields!";
         }
         else{
