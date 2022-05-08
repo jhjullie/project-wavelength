@@ -11,27 +11,21 @@ import Paper from '@mui/material/Paper';
 function Home() {
     return (
       
-      <Container maxWidth="sm" className="Home">
-        {/* <Paper elevation={0} > */}
-          
-          <img src={logo} className="App-logo" alt="logo" />
-          <Typography variant="h4" component="h1" gutterBottom>
-            Dating app based on music taste.
-          </Typography>
-          <Link to = "/signup" style={{ textDecoration: 'none' }}>
-            <Button variant="contained" color="primary" classname= "buttons">
-              Join
-            </Button>
-            </Link>
+      <div className="Home">
+      <p id="wavelengthname">wavelength</p>
+      
+      <p id="opening">Find your wavelength.</p>
 
-          <Link to = "/signin" style={{ textDecoration: 'none' }}>
-            <Button variant="outlined" color="secondary" classname="buttons">
-                Log In
-            </Button>
-          </Link>
-       
-        {/* </Paper> */}
-      </Container>
+      <div>
+        <Link to="/signup" class='firstbutton' style={{ textDecoration: 'none', color:'white' }}>
+          Join</Link>
+      </div>
+
+      <div>
+      <Link to = "/signin" class="secondbutton" style={{ textDecoration: 'none' }}>
+          Log In</Link>
+      </div>
+    </div>
   
     );
   }

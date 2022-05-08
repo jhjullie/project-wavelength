@@ -1,6 +1,5 @@
 body{
-    background-image: url("../../bg.svg");
-    
+    background-image: url(../Home/Backgroundhome.png);  
 }
 
 .Home {
@@ -9,14 +8,55 @@ body{
    
 }
   
-.App-logo {
-    height: 40vmin;
-    width:50vmin;
-    pointer-events: none;
-    
+#wavelengthname{
+    font-family: 'Sacramento', cursive;
+    font-weight: 400;
+    font-size: 90px;
+    left: 0;
+    line-height: 200px;
+    margin-top: -180px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+}
+
+#opening{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+    left: 0;
+    line-height: 200px;
+    margin-top: -75px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
 }
   
-.buttons{
-    padding:10px;
-    color:black;
+.firstbutton{
+    background-color:#F230AA;
+    border:#F230AA;
+    color: white;
+    padding:15px 32px;
+    border-radius: 20px;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top:60%;
+    right: 54%;
+    width: 120px;
+}
+
+.secondbutton{
+    background-color:white;
+    color: #F230AA;
+    padding:15px 32px;
+    border-radius: 20px;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top:60%;
+    left: 54%;
+    width: 120px;
 }
