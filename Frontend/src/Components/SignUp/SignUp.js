@@ -47,11 +47,11 @@ function SignUp(){
             console.log(inputs);
             var data = {
                 first_name: inputs.first_name,
-                last_name: inputs.last_name,
                 gender: inputs.gender,  
                 phonenum: inputs.phonenum,  
                 email: inputs.email,
-                age: inputs.age
+                age: inputs.age,
+                genre: inputs.genre
             };
             dataservice.create(data)
             .then((response) => {
@@ -156,7 +156,7 @@ function SignUp(){
                         </label>
                         <label>
                             <p>Favorite Genre</p>
-                            <select name="gender" id="gender">
+                            <select name="genre" id="genre">
                                 <option value="hiphop">Hip hop</option>
                                 <option value="rnb">RnB</option>
                                 <option value="pop">Pop</option>
