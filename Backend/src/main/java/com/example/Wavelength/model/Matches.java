@@ -26,8 +26,8 @@ public class Matches {
 //    @ManyToOne(cascade = CascadeType.ALL)
 //    private User user;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "fk_user")
-    private User user;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "fk_user")
+//    private User user;
 
 }

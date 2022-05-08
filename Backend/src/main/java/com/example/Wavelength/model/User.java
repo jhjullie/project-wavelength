@@ -24,8 +24,8 @@ public class User {
     @Column(name = "User_firstname")
     private String first_name;
 
-    @Column(name = "User_lastname")
-    private String last_name;
+//    @Column(name = "User_lastname")
+//    private String last_name;
 
     @Column(name = "User_gender")
     private String gender;
@@ -39,8 +39,14 @@ public class User {
     @Column(name = "User_age")
     private Integer age;
 
-    @OneToMany(mappedBy = "user")
-    private List<Matches> items = new ArrayList<>();
+    @Column(name = "User_password")
+    private String password;
+
+    @Column(name = "User_genre")
+    private String genre;
+
+//    @OneToMany(mappedBy = "user")
+//    private List<Matches> items = new ArrayList<>();
 
 //    @OneToMany(mappedBy="user")
 //    private Set<Matches> matches;
@@ -54,13 +60,15 @@ public class User {
 
     }
 
-    public User(String first_name, String last_name , String gender, String phonenum, String email, Integer age) {
+    public User(String first_name, String gender, String phonenum,
+                String email, Integer age, String password, String genre) {
         this.first_name = first_name;
-        this.last_name = last_name;
         this.gender = gender;
         this.phonenum = phonenum;
         this.email = email;
         this.age = age;
+        this.password = password;
+        this.genre = genre;
     }
 
 

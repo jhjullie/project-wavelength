@@ -18,19 +18,21 @@ public class UserExample {
         return args -> {
             User newEntry = new User(
                     "Tiffany",
-                    "yu",
                     "Female",
                     "510-990-7502",
                     "tiffanyyu@usc.edu",
-                    18
+                    18,
+                    "tiffanyPassword",
+                    "RnB"
             );
             User updatedEntry = new User(
                     "pete",
-                    "yu",
                     "Male",
                     "520-990-7502",
                     "pete@usc.edu",
-                    18
+                    18,
+                    "petePassword",
+                    "Pop"
             );
             userRepository.saveAll(
                     List.of(newEntry, updatedEntry)
