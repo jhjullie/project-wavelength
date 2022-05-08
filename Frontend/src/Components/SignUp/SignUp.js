@@ -121,7 +121,6 @@ function SignUp(){
 
             <form onSubmit={handleSubmit} >
                 <div id="signupform">
-                <p id="signupheader" >Sign Up</p>    
                     <div className = "col">
                         <label>
                             <p>First Name</p>
@@ -177,6 +176,9 @@ function SignUp(){
                 
                 
                 </div>
+
+                <p className="terms">*By signing up, you are agreeing to our Terms & Conditions.</p>
+
                 <div>
                     <Button type="submit" id="signupbutton" variant="contained" color="primary"> Sign Up</Button>
                 </div>

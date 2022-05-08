@@ -40,23 +40,51 @@ li{
 }
 
 #signupform{
-    background-color: white;
+    background-color: #F230AA;
     border-radius: 25px;
-    border: 2px solid #E3F600;
+    border: 2px solid white;
     width:700px;
-    height:500px;
+    height: 420px;
     margin:auto;
-    text-align:left;    
+    text-align:left;
     padding-left:50px;
     padding-right:50px;
-    padding-top:30px;
+    padding-top:15px;
+    padding-bottom:20px;
+    font-family: 'Roboto';
+    font-style:normal;
+    color: white;
 }
+
+input{
+    width: 238px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #ffd2ee;
+    border-color: #F230AA;
+    font-family: 'Roboto';
+    font-style: italic;
+    color: black;
+}
+
+select{
+    width: 238px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #ffd2ee;
+    border-color: #F230AA;
+    font-family: 'Roboto';
+    font-style: italic;
+    color: black;
+}
+
 #signupheader{
     text-align:center;
     font-size: 30px !important;
     font-family: 'Roboto', sans-serif !important; 
     margin:0!important;
 }
+
 .col{
     display:inline;
     float:left;
@@ -66,20 +94,27 @@ li{
 #signupform input{
     height:30px;
     width:80%;
-    
 }
 
 #signupbutton{
     height: 70px;
-    width: 20%;
-    background-color:#E3F600;
-    /* background-color:#1645D3; */
+    width: 40%;
+    background-color:#F230AA;
     margin-top:30px;
     box-shadow:none !important;
     border-radius:20px;
     margin-bottom:50px;
+    color: white;
+    font-size: medium;
+}
+
+#terms{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
 }
 
 .errormsg{
-    color:red;
+    color:rgb(255, 255, 255);
 }
