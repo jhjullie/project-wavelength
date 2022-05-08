@@ -59,9 +59,59 @@ function Profile(){
        </div>
         <div id="maincontainer">
             <p id="profileheader">My Profile</p>
-            <div id="myprofile">
-                <h1>Name: </h1>
-
+            <div id="myProfile">
+            <div className = "col">
+                    <label>
+                        <p>Name {' '}
+                            <input type= "text" name = "first_name"/>
+                        </p>
+                    </label>
+                    <label>
+                        <p>Email {' '}
+                            <input type= "text" name = "email"/>
+                        </p>
+                    </label>
+                    <label>
+                        <p>Phone Number {' '}
+                            <input type= "text" name = "phonenum"/>
+                        </p>
+                    </label>
+                    <label>
+                        <p>Password {' '}
+                            <input type= "password" name = "password"/>
+                        </p>
+                    </label>
+                    <label>
+                        <p>Gender Preference {' '}
+                            <select name="gender" id="gender">
+                                <option value="female">Female-identifying</option>
+                                <option value="male">Male-identifying</option>
+                                <option value="both">Both</option>
+                            </select>
+                        </p>                         
+                    </label>
+                    <label>
+                        <p>Age {' '}
+                            <input type= "text" name = "age"/>
+                        </p>
+                    </label>
+                    <label>
+                        <p>Favorite Genre {' '}
+                            <select name="gender" id="gender">
+                                <option value="hiphop">Hip hop</option>
+                                <option value="rnb">RnB</option>
+                                <option value="pop">Pop</option>
+                                <option value="rock">Rock</option>
+                                <option value="classical">Classical</option>
+                            </select>     
+                        </p>                    
+                    </label>
+                    <label>
+                        <p>Confirm Password {' '}
+                            <input type= "password" name = "password2"/>
+                        </p>
+                    </label>
+                </div>
             </div>
         </div>
 
@@ -70,3 +120,5 @@ function Profile(){
 }
 
 export default Profile;
+
+
