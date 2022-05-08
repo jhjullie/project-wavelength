@@ -73,7 +73,6 @@ public class User {
                 String email, Integer age, String password, String genre,
                 Set<String> likedAccs, Set<String> likedByAccs) {
         this.first_name = first_name;
-        this.last_name = last_name;
         this.gender = gender;
         this.phonenum = phonenum;
         this.email = email;
@@ -87,7 +86,6 @@ public class User {
     public User(String first_name, String gender, String phonenum,
                 String email, Integer age, String password, String genre) {
         this.first_name = first_name;
-        this.last_name = last_name;
         this.gender = gender;
         this.phonenum = phonenum;
         this.email = email;
