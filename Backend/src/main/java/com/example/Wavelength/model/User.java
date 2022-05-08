@@ -9,7 +9,6 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Data
@@ -19,13 +18,13 @@ import java.util.Set;
 public class User {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private static Long ID;
+    public Long ID;
 
     @Column(name = "User_firstname")
     private String first_name;
 
-//    @Column(name = "User_lastname")
-//    private String last_name;
+    @Column(name = "User_lastname")
+    private String last_name;
 
     @Column(name = "User_gender")
     private String gender;
@@ -45,24 +44,50 @@ public class User {
     @Column(name = "User_genre")
     private String genre;
 
-//    @OneToMany(mappedBy = "user")
-//    private List<Matches> items = new ArrayList<>();
+    @Column(name = "likedAccs")
+//    @ManyToOne
+    private Set<String> likedAccs;
 
-//    @OneToMany(mappedBy="user")
-//    private Set<Matches> matches;
+    @Column(name = "likedByAccs")
+    private Set<String> likedByAccs;
 
-//    @OneToMany(targetEntity=Matches.class,cascade = CascadeType.ALL,
-//            fetch = FetchType.LAZY, orphanRemoval = true)
-//    @JoinColumn(name = "userId", referencedColumnName = "ID")
-//    private List<Matches> matches = new ArrayList<>();
+
+
+
+//    @Column(name = "Expiration")
+//    private LocalDate expiration;
+//
+//    @Column(name = "Creation")
+//    private LocalDate creation;
+
+//    @Setter @Getter
+//    @Column(name = "UserId")
+//    private String UserId;
+
 
     public User(){
 
     }
 
     public User(String first_name, String gender, String phonenum,
+                String email, Integer age, String password, String genre,
+                Set<String> likedAccs, Set<String> likedByAccs) {
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.gender = gender;
+        this.phonenum = phonenum;
+        this.email = email;
+        this.age = age;
+        this.password = password;
+        this.genre = genre;
+        this.likedAccs = likedAccs;
+        this.likedByAccs = likedByAccs;
+    }
+
+    public User(String first_name, String gender, String phonenum,
                 String email, Integer age, String password, String genre) {
         this.first_name = first_name;
+        this.last_name = last_name;
         this.gender = gender;
         this.phonenum = phonenum;
         this.email = email;
@@ -70,6 +95,5 @@ public class User {
         this.password = password;
         this.genre = genre;
     }
-
 
 }

@@ -22,8 +22,8 @@ public class UserExample {
                     "510-990-7502",
                     "tiffanyyu@usc.edu",
                     18,
-                    "tiffanyPassword",
-                    "RnB"
+                    "tiffanyPW",
+                    "Pop"
             );
             User updatedEntry = new User(
                     "pete",
@@ -31,8 +31,9 @@ public class UserExample {
                     "520-990-7502",
                     "pete@usc.edu",
                     18,
-                    "petePassword",
-                    "Pop"
+                    "petePW",
+                    "RnB"
+
             );
             userRepository.saveAll(
                     List.of(newEntry, updatedEntry)

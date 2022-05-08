@@ -43,8 +43,9 @@ public class User_Controller {
 
 //    @PostMapping("/users")
 //    public void createUser(@RequestBody User user){
-//        userrepository.save(new User(user.getFirst_name(), user.getLast_name(),
-//                user.getGender(), user.getPhonenum(), user.getEmail(), user.getAge()) );
+//        userrepository.save(new User(user.getFirst_name(),
+//                user.getGender(), user.getPhonenum(), user.getEmail(),
+//                user.getAge()), user.getPassword(), user.getGenre());
 //
 //    }
 }
