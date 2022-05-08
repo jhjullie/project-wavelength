@@ -48,8 +48,8 @@ public class User {
 //    @ManyToOne
     private Set<String> likedAccs;
 
-    @Column(name = "likedByAccs")
-    private Set<String> likedByAccs;
+    @Column(name = "matches")
+    private Set<String> matches;
 
 
 
@@ -71,7 +71,7 @@ public class User {
 
     public User(String first_name, String gender, String phonenum,
                 String email, Integer age, String password, String genre,
-                Set<String> likedAccs, Set<String> likedByAccs) {
+                Set<String> likedAccs, Set<String> matches) {
         this.first_name = first_name;
         this.gender = gender;
         this.phonenum = phonenum;
@@ -80,7 +80,7 @@ public class User {
         this.password = password;
         this.genre = genre;
         this.likedAccs = likedAccs;
-        this.likedByAccs = likedByAccs;
+        this.matches = matches;
     }
 
     public User(String first_name, String gender, String phonenum,
