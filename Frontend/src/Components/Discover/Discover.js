@@ -12,6 +12,8 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { IconButton } from '@mui/material';
 import TinderCard from 'react-tinder-card';
 import { CurrencyYenTwoTone } from '@mui/icons-material';
+import Badge from '@mui/material/Badge';
+import PublicIcon from '@mui/icons-material/Public';
 
 
 
@@ -71,6 +73,11 @@ function Discover(){
                     <Link to="/discover" style={{ textDecoration: 'none', color: 'black' }}>
                     < HomeRoundedIcon fontSize="large"/>
                     </Link>
+               </li>
+               <li> 
+                    <Badge badgeContent={4} color="secondary">
+                    < PublicIcon fontSize="large"/>
+                    </Badge>
                </li>
             
            <li id="logo_li">

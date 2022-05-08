@@ -6,6 +6,8 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import LogoutIcon from '@mui/icons-material/Logout';
+import Badge from '@mui/material/Badge';
+import PublicIcon from '@mui/icons-material/Public';
 
 function Profile(){
     const navigate = useNavigate();
@@ -39,6 +41,11 @@ function Profile(){
                     <Link to="/discover" style={{ textDecoration: 'none', color: 'black' }}>
                     < HomeRoundedIcon fontSize="large"/>
                     </Link>
+               </li>
+               <li> 
+                    <Badge badgeContent={4} color="secondary">
+                    < PublicIcon fontSize="large"/>
+                    </Badge>
                </li>
             
            <li id="logo_li">
