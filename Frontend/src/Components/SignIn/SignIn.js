@@ -73,7 +73,7 @@ function SignIn(){
            
             <ul>
             <li>
-                <Link to="/signup" style={{ textDecoration: 'none', color:'black' }}>Sign Up</Link>
+                <Link to="/signUp" style={{ textDecoration: 'none', color:'black' }}>Sign Up</Link>
             </li>
             <li id="logo_li">
                 <Link to="/" style={{ textDecoration: 'none' }}>
@@ -95,12 +95,12 @@ function SignIn(){
                     <p>Email</p>
                     <input type="text" name= "email" value={inputs.email} onChange={handleChange} />
                 </label>
-                <p className="errormsg">{errors.email }</p>
+                <p className="errormsg2">{errors.email }</p>
                 <label>
                     <p>Password</p>
                     <input type="password" name= "password" value={inputs.password} onChange={handleChange} />
                 </label>
-                <p className= "errormsg">{errors.password }</p>
+                <p className= "errormsg2">{errors.password }</p>
                 <div>
                     <Button type="submit" id="submitbutton" variant="contained" color="primary"> Submit</Button>
                 </div>

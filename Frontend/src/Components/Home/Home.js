@@ -14,7 +14,7 @@ function Home() {
       <div className="Home">
       <p id="wavelengthname">wavelength</p>
       
-      <p id="opening">Find your wavelength.</p>
+      <p id="opening">Find someone on your Wavelength.</p>
 
       <div>
         <Link to="/signup" class='firstbutton' style={{ textDecoration: 'none', color:'white' }}>
