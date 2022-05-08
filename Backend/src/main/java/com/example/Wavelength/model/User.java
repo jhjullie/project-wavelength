@@ -7,6 +7,10 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Data
 @Entity
@@ -15,7 +19,7 @@ import java.time.LocalDate;
 public class User {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    public Long ID;
+    private static Long ID;
 
     @Column(name = "User_firstname")
     private String first_name;
@@ -35,16 +39,16 @@ public class User {
     @Column(name = "User_age")
     private Integer age;
 
-//    @Column(name = "Expiration")
-//    private LocalDate expiration;
-//
-//    @Column(name = "Creation")
-//    private LocalDate creation;
+    @OneToMany(mappedBy = "user")
+    private List<Matches> items = new ArrayList<>();
 
-//    @Setter @Getter
-//    @Column(name = "UserId")
-//    private String UserId;
+//    @OneToMany(mappedBy="user")
+//    private Set<Matches> matches;
 
+//    @OneToMany(targetEntity=Matches.class,cascade = CascadeType.ALL,
+//            fetch = FetchType.LAZY, orphanRemoval = true)
+//    @JoinColumn(name = "userId", referencedColumnName = "ID")
+//    private List<Matches> matches = new ArrayList<>();
 
     public User(){
 

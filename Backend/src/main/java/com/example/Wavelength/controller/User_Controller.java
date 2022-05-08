@@ -31,20 +31,20 @@ public class User_Controller {
 //        return userService.
 //    }
 
-//    @PostMapping
-//    public void postUser(@RequestBody(required = false) User user) {
-//        userService.addUsers(user);
-//    }
+    @PostMapping("/users")
+    public void postUser(@RequestBody(required = false) User user) {
+        userService.addUsers(user);
+    }
 
 //    @DeleteMapping(path = "{email}")
 //    public void deleteUser(@PathVariable("email") String email) {
 //        userService.deleteUsers(email);
 //    }
 
-    @PostMapping("/users")
-    public void createUser(@RequestBody User user){
-        userrepository.save(new User(user.getFirst_name(), user.getLast_name(),
-                user.getGender(), user.getPhonenum(), user.getEmail(), user.getAge()) );
-
-    }
+//    @PostMapping("/users")
+//    public void createUser(@RequestBody User user){
+//        userrepository.save(new User(user.getFirst_name(), user.getLast_name(),
+//                user.getGender(), user.getPhonenum(), user.getEmail(), user.getAge()) );
+//
+//    }
 }
