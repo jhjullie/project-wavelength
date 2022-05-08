@@ -58,32 +58,32 @@ function Profile(){
            
        </div>
         <div id="maincontainer">
+          <div id="myProfile">
             <p id="profileheader">My Profile</p>
-            <div id="myProfile">
             <div className = "col">
                     <label>
-                        <p>Name {' '}
-                            <input type= "text" name = "first_name"/>
+                        <p>First Name {' '}
+                            <input type= "text" name = "first_name" class="myinput"/>
                         </p>
                     </label>
                     <label>
                         <p>Email {' '}
-                            <input type= "text" name = "email"/>
+                            <input type= "text" name = "email" class="myinput"/>
                         </p>
                     </label>
                     <label>
                         <p>Phone Number {' '}
-                            <input type= "text" name = "phonenum"/>
+                            <input type= "text" name = "phonenum" class="myinput"/>
                         </p>
                     </label>
                     <label>
                         <p>Password {' '}
-                            <input type= "password" name = "password"/>
+                            <input type= "password" name = "password" class="myinput"/>
                         </p>
                     </label>
                     <label>
                         <p>Gender Preference {' '}
-                            <select name="gender" id="gender">
+                            <select name="gender" id="gender" class="myinput">
                                 <option value="female">Female-identifying</option>
                                 <option value="male">Male-identifying</option>
                                 <option value="both">Both</option>
@@ -92,12 +92,12 @@ function Profile(){
                     </label>
                     <label>
                         <p>Age {' '}
-                            <input type= "text" name = "age"/>
+                            <input type= "text" name = "age" class="myinput"/>
                         </p>
                     </label>
                     <label>
                         <p>Favorite Genre {' '}
-                            <select name="gender" id="gender">
+                            <select name="gender" id="gender" class="myinput">
                                 <option value="hiphop">Hip hop</option>
                                 <option value="rnb">RnB</option>
                                 <option value="pop">Pop</option>
@@ -108,7 +108,7 @@ function Profile(){
                     </label>
                     <label>
                         <p>Confirm Password {' '}
-                            <input type= "password" name = "password2"/>
+                            <input type= "password" name = "password2" class="myinput"/>
                         </p>
                     </label>
                 </div>
