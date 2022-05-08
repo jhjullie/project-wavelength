@@ -80,12 +80,13 @@ li{
 #nobutton{
     color:#ec5e6f !important;
     position:fixed;
-    bottom:5vh;
-    left: 25%;
+    bottom:40%;
+    left: 20%;
+    
 }
 #yesbutton{
     color:#76e2b3 !important;
     position:fixed;
-    bottom:5vh;
-    left: 70%;
+    bottom:40%;
+    right: 20%;
 }
