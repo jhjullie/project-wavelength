@@ -58,7 +58,7 @@ function Profile(){
            
        </div>
         <div id="maincontainer">
-          <div id="myProfile">
+          <div id="myprofile">
             <p id="profileheader">My Profile</p>
             <div className = "col">
                     <label>
