@@ -82,11 +82,11 @@ function Profile(){
                         </p>
                     </label>
                     <label>
-                        <p>Gender {' '}
+                        <p>Gender Preference {' '}
                             <select name="gender" id="gender" class="myinput">
-                                <option value="female">Female</option>
-                                <option value="male">Male</option>
-                                <option value="both">Non Binary</option>
+                                <option value="female">Female-identifying</option>
+                                <option value="male">Male-identifying</option>
+                                <option value="both">Both</option>
                             </select>
                         </p>                         
                     </label>
@@ -120,9 +120,5 @@ function Profile(){
 }
 
 export default Profile;
-
-
-
-
 
 

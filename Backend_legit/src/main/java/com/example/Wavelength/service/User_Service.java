@@ -20,9 +20,9 @@ public class User_Service {
         return userRepository.findAll();
     }
 
-//    public String getUserFirstName() {
-//        return userRepository.findFirstName();
-//    }
+    public String getUserName(String name) {
+        return userRepository.findUserByName(name);
+    }
 
     public void addUsers(User user) {
         Optional<User> userOptional= userRepository.findVendorByEmail(user.getEmail());

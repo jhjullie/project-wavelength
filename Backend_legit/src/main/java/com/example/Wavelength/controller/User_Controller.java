@@ -26,6 +26,12 @@ public class User_Controller {
     @GetMapping
     public List<User> getUsers() { return userService.getUsers();}
 
+    @GetMapping("/api/Users/{name}")
+    @ResponseBody
+    public String getSpecificUser(@PathVariable String name) {
+        return userService.getUserName(name);
+    }
+
 //    @GetMapping(value = "/users/{id}")
 //    public User getUser(@PathVariable("id") String id) {
 //        return userService.

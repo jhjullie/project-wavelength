@@ -14,7 +14,8 @@ const defaultvalues = {
     gender:"",
     age:"",
     password:"",
-    password2:""
+    password2:"",
+    genre:""
 };
 
 function SignUp(){
@@ -143,11 +144,11 @@ function SignUp(){
                     </div>
                     <div className = "col">
                         <label>
-                            <p>Gender </p>
+                            <p>Gender Preference</p>
                             <select name="gender" id="gender">
-                                <option value="female">Female</option>
-                                <option value="male">Male</option>
-                                <option value="both">Non Binary</option>
+                                <option value="female">Female-identifying</option>
+                                <option value="male">Male-identifying</option>
+                                <option value="both">Both</option>
                             </select>                         
                         </label>
                         <label>
@@ -177,7 +178,7 @@ function SignUp(){
                 
                 </div>
 
-                <p className="terms">*By signing up, you are agreeing to our Terms & Conditions.</p>
+                <p className="terms">*By signing up, you are agreeing to our Terms &amp; Conditions.</p>
 
                 <div>
                     <Button type="submit" id="signupbutton" variant="contained" color="primary"> Sign Up</Button>
