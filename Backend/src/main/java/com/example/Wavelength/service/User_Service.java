@@ -24,14 +24,31 @@ public class User_Service {
 //        return userRepository.findFirstName();
 //    }
 
+
     public void addUsers(User user) {
-        Optional<User> userOptional= userRepository.findVendorByEmail(user.getEmail());
+        Optional<User> userOptional= userRepository.findByEmailOptional(user.getEmail());
         if(userOptional.isPresent())
         {
             throw new IllegalStateException("Email taken");
         }
         System.out.println(user.getEmail());
         userRepository.save(user);
+    }
+
+    public void getGenre() {
+        return userRepository
+    }
+
+
+    public boolean authenticate (String email, String pwd) {
+        User user = userRepository.findByEmail(email);
+        if(user != null) {
+            if (pwd == user.getPassword()) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
 //    public void deleteUsers(String email) {

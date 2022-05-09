@@ -2,6 +2,7 @@ package com.example.Wavelength.controller;
 import com.example.Wavelength.service.User_Service;
 import com.example.Wavelength.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import com.example.Wavelength.repository.UserRepository;
 
@@ -29,6 +30,13 @@ public class User_Controller {
 //    @GetMapping(value = "/users/{id}")
 //    public User getUser(@PathVariable("id") String id) {
 //        return userService.
+//    }
+
+
+//    @GetMapping("/signin")
+//    public String getSignInPage(Model model) {
+//        model.addAttribute(s: "signInRequest", new User());
+//        return "SignIn";
 //    }
 
     @PostMapping("/users")

@@ -11,13 +11,23 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<User, Long> {
 
 
+    // jullie - sign in authentication
+    Optional<User> findByEmailAndPassword(String email, String pwd);
+
+    // get favorite genre
+    @Query("SELECT g From User u  WHERE u.email = ?1")
+    String getGenre(User u);
 
     //returning User
-    @Query("SELECT s FROM User s WHERE s.email =?1")
-    Optional<User> findVendorByEmail(String email);
+    @Query("SELECT u FROM User u WHERE u.email = ?1")
+    User findByEmail(String email);
 
-    @Query("SELECT s FROM User s WHERE s.last_name=?1")
-    Optional<User> findVendorByName(String name);
+    @Query("SELECT u FROM User u WHERE u.email = ?1")
+    Optional<User> findByEmailOptional(String email);
+
+
+    @Query("SELECT s FROM User s WHERE s.first_name=?1")
+    Optional<User> findByName(String name);
 
 //    @Query("SELECT s FROM Vendor s WHERE s.tUserId=?1")
 //    Optional<Vendor> findVendorBytUserID(String tUserId);
