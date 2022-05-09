@@ -6,8 +6,8 @@ class DataService{
     create(data){
         return http.post("/users", data);
     }
-    getVendor() {
-        return axios.get(EMPLOYEE_BASE_API_URL);
-      }
+    // getVendor() {
+    //     return axios.get(EMPLOYEE_BASE_API_URL);
+    //   }
 }
 export default new DataService;

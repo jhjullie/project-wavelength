@@ -143,7 +143,7 @@ function SignUp(){
                     </div>
                     <div className = "col">
                         <label>
-                            <p>Gender Preference</p>
+                            <p>Gender </p>
                             <select name="gender" id="gender">
                                 <option value="female">Female</option>
                                 <option value="male">Male</option>

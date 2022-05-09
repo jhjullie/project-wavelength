@@ -1,4 +1,3 @@
-Profile js
 import * as React from 'react';
 import { Routes, Route, Link, useNavigate, Navigate} from "react-router-dom";
 import logo from './../../../src/wavelength.svg';
