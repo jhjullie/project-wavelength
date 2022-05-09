@@ -8,7 +8,6 @@ import dataservice from '../../Services/Service';
 
 const defaultvalues = {
     first_name:"",
-    last_name:"",
     email:"",
     phonenum:"",
     gender:"",
