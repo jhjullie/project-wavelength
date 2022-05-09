@@ -9,12 +9,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Wavelength" />
         <module name="Backend" />
+        <module name="Backend_legit" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Backend" options="-parameters" />
+      <module name="Backend_legit" options="-parameters" />
       <module name="Wavelength" options="-parameters" />
     </option>
   </component>

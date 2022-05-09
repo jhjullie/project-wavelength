@@ -19,4 +19,8 @@ public class Matches_Controller {
     public Matches_Controller (Matches_Service matchesservice){
         this.matchesService= matchesservice;
     }
+
+    @GetMapping
+    public List<String> getMatches(String email) { return matchesService.getMatches(email);}
+
 }
