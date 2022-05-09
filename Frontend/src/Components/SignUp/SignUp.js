@@ -145,9 +145,9 @@ function SignUp(){
                         <label>
                             <p>Gender Preference</p>
                             <select name="gender" id="gender">
-                                <option value="female">Female-identifying</option>
-                                <option value="male">Male-identifying</option>
-                                <option value="both">Both</option>
+                                <option value="female">Female</option>
+                                <option value="male">Male</option>
+                                <option value="both">Non Binary</option>
                             </select>                         
                         </label>
                         <label>
