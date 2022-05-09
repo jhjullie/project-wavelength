@@ -1,3 +1,4 @@
+Profile js
 import * as React from 'react';
 import { Routes, Route, Link, useNavigate, Navigate} from "react-router-dom";
 import logo from './../../../src/wavelength.svg';
@@ -82,11 +83,11 @@ function Profile(){
                         </p>
                     </label>
                     <label>
-                        <p>Gender Preference {' '}
+                        <p>Gender {' '}
                             <select name="gender" id="gender" class="myinput">
-                                <option value="female">Female-identifying</option>
-                                <option value="male">Male-identifying</option>
-                                <option value="both">Both</option>
+                                <option value="female">Female</option>
+                                <option value="male">Male</option>
+                                <option value="both">Non Binary</option>
                             </select>
                         </p>                         
                     </label>
@@ -120,5 +121,9 @@ function Profile(){
 }
 
 export default Profile;
+
+
+
+
 
 
