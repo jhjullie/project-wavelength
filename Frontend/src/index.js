@@ -8,7 +8,8 @@ import reportWebVitals from './reportWebVitals';
 import theme from './theme';
 import { CssBaseline } from '@mui/material';
 import { ThemeProvider } from '@mui/system';
-
+// jullie edits
+import { AuthProvider } from './Context/AuthProvider'
 
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -17,14 +18,25 @@ import { ThemeProvider } from '@mui/system';
 //   document.getElementById('root')
 // );
 
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <AuthProvider>
+//       <App />
+//     </AuthProvider>
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(
       <BrowserRouter>
-        <ThemeProvider theme={theme}>
-          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-          <CssBaseline />
-          <App />
-        </ThemeProvider>
+        <AuthProvider>
+          <ThemeProvider theme={theme}>
+            {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+            <CssBaseline />
+            <App />
+          </ThemeProvider>
+        </AuthProvider>
       </BrowserRouter>
 
 );
