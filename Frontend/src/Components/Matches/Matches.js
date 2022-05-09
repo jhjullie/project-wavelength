@@ -8,11 +8,50 @@ import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import LogoutIcon from '@mui/icons-material/Logout';
 import Badge from '@mui/material/Badge';
 import PublicIcon from '@mui/icons-material/Public';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+//import services from "../services/Service.js";
+import { DataGrid } from '@mui/x-data-grid';
+import axios from "axios";
+// import { Box } from "@material-ui/core";
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+
+const columns = [
+    { field: 'id', headerName: 'ID', width: 70 },
+    { field: 'firstName', headerName: 'First name', width: 130 },
+    { field: 'lastName', headerName: 'Last name', width: 130 },
+    {
+      field: 'age',
+      headerName: 'Age',
+      type: 'number',
+      width: 90,
+    },
+    {
+      field: 'fullName',
+      headerName: 'Full name',
+      description: 'This column has a value getter and is not sortable.',
+      sortable: false,
+      width: 160,
+      valueGetter: (params) =>
+        `${params.row.firstName || ''} ${params.row.lastName || ''}`,
+    },
+  ];
+  
+  const rows = [
+    { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
+    { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
+    { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
+    { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
+    { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
+    { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
+    { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
+    { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
+    { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+  ];
 
 function Matches(){
 
@@ -22,52 +61,6 @@ function Matches(){
 
         return navigate('/');
     }
-    function SimpleAccordion() {
-        return (
-            <div>
-              <Accordion>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                >
-                  <Typography>Accordion 1</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel2a-content"
-                  id="panel2a-header"
-                >
-                  <Typography>Accordion 2</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion disabled>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel3a-content"
-                  id="panel3a-header"
-                >
-                  <Typography>Disabled Accordion</Typography>
-                </AccordionSummary>
-              </Accordion>
-            </div>
-          );
-    }
-
     return(
         <>
         <div id="navbar" >
@@ -98,37 +91,31 @@ function Matches(){
                     < PublicIcon fontSize="large"/>
                     </Badge>
                </li>
-
-
-
            <li id="logo_li">
                <Link to="/" style={{ textDecoration: 'none' }}>
                    {/* <img src={logo} id="logo_img" alt="logo" /> */}
                </Link>
            </li>
            </ul>
-           
+           {/* Code regarding the actual page */}
        </div>
         <div id="maincontainer">
             <p id="matchesheader">Your Matches</p>
         </div>
-        <div>
-        <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography>Accordion 1</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-        </div>
+        <div style={{ height: 400, width: '100%' }}>
+      <DataGrid
+        rows={rows}
+        columns={columns}
+        pageSize={5}
+        rowsPerPageOptions={[5]}
+        checkboxSelection
+      />
+    </div>
+     
+
+
+
+
         </>
     );
 
